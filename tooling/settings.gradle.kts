@@ -3,6 +3,10 @@
 // This is a standalone composite build; it does NOT share the IDE's libs catalog or modules.
 
 pluginManagement {
+    plugins {
+        kotlin("jvm") version "2.4.0"
+        kotlin("kapt") version "2.4.0"
+    }
     repositories {
         gradlePluginPortal()
         mavenCentral()
