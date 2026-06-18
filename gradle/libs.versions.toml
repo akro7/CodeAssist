@@ -56,7 +56,7 @@ ow2-asm-commons = { module = "org.ow2.asm:asm-commons", version.ref = "asm" } # 
 # Used only as dependency-substitution targets for composite builds (build-deps-common, build-logic).
 # The version string is irrelevant at resolution time since Gradle substitutes these with the
 # corresponding included-build project — but a version is still required for valid TOML coordinates.
-composite-desugaring-core = { module = "com.tom.rv2ide.build:desugaring-core", version = "1.0" }
+composite-desugaringCore = { module = "com.tom.rv2ide.build:desugaring-core", version = "1.0" }
 android-gradle-plugin = { module = "com.android.tools.build:gradle", version.ref = "agp" }
 
 [plugins]
