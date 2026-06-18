@@ -1,7 +1,7 @@
 // tooling-api: the RPC contract the IDE uses to talk to the Gradle tooling daemon.
 plugins {
     id("java-library")
-    id("org.jetbrains.kotlin.jvm")
+    kotlin("jvm")
 }
 
 java {
@@ -11,11 +11,6 @@ java {
 
 kotlin {
     jvmToolchain(17)
-}
-
-repositories {
-    google()
-    mavenCentral()
 }
 
 dependencies {
