@@ -1,7 +1,7 @@
 // tooling-model: data-model exchanged over the tooling protocol (project info, classpath, AGP variants, etc.)
 plugins {
     id("java-library")
-    id("org.jetbrains.kotlin.jvm")
+    kotlin("jvm")
 }
 
 java {
@@ -11,11 +11,6 @@ java {
 
 kotlin {
     jvmToolchain(17)
-}
-
-repositories {
-    google()
-    mavenCentral()
 }
 
 dependencies {
