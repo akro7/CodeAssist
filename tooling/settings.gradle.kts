@@ -2,8 +2,6 @@
 // user projects so the IDE can query their Gradle build (symbol resolution, dependency graph, etc.).
 // This is a standalone composite build; it does NOT share the IDE's libs catalog or modules.
 
-rootProject.name = "akro-tooling"
-
 pluginManagement {
     repositories {
         gradlePluginPortal()
@@ -11,6 +9,8 @@ pluginManagement {
         google()
     }
 }
+
+rootProject.name = "akro-tooling"
 
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
