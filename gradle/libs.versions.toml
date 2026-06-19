@@ -59,7 +59,7 @@ ow2-asm-commons = { module = "org.ow2.asm:asm-commons", version.ref = "asm" } # 
 # Used by composite-builds/build-logic/plugins (lexer/parser generation, JSON, code formatting)
 antlr4 = { module = "org.antlr:antlr4", version = "4.13.2" }
 gson = { module = "com.google.code.gson:gson", version = "2.10.1" }
-google-java-format = { module = "com.google.googlejavaformat:google-java-format", version = "1.25.2" }
+googlejavaformat = { module = "com.google.googlejavaformat:google-java-format", version = "1.25.2" }
 
 # Used only as dependency-substitution targets for composite builds (build-deps-common, build-logic).
 # The version string is irrelevant at resolution time since Gradle substitutes these with the
