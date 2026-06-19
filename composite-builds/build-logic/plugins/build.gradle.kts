@@ -38,11 +38,11 @@ dependencies {
   implementation(projects.buildLogic.desugaring)
   implementation(projects.buildLogic.propertiesParser)
 
-  implementation("com.android.tools.build:gradle:${libs.versions.agp.asProvider().get()}")
+  implementation("com.android.tools.build:gradle:${libs.versions.agp.get()}")
 
-  implementation(libs.common.jkotlin)
-  implementation(libs.common.antlr4)
-  implementation(libs.google.gson)
+  implementation(libs.kotlin.compiler.embeddable)
+  implementation(libs.antlr4)
+  implementation(libs.gson)
   implementation(libs.google.java.format)
 }
 
