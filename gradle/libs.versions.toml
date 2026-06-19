@@ -16,6 +16,9 @@ apksig = "8.7.3"      # com.android.apksig.ApkSigner — APK v1/v2/v3 signing
 asm = "9.7"           # org.ow2.asm — bytecode rewrite of System.exit for the in-process Java dex-run
 trove4j = "1.0.20200330"  # gnu.trove.* — IntelliJ-core dependency the Kotlin compiler needs but doesn't bundle
 desugarJdkLibs = "2.1.5"  # com.android.tools:desugar_jdk_libs — core-library desugaring (temporarily enabled)
+antlr = "4.13.2"          # org.antlr:antlr4 — used by build-logic's LexerGeneratorPlugin
+gson = "2.10.1"           # com.google.code.gson:gson
+googleJavaFormat = "1.25.2" # com.google.googlejavaformat:google-java-format
 
 [libraries]
 kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "coroutines" }
@@ -53,11 +56,21 @@ ow2-asm = { module = "org.ow2.asm:asm", version.ref = "asm" }
 ow2-asm-tree = { module = "org.ow2.asm:asm-tree", version.ref = "asm" }
 ow2-asm-commons = { module = "org.ow2.asm:asm-commons", version.ref = "asm" } # ClassRemapper/Remapper — bridge reparent + type remap
 
+# Used by composite-builds/build-logic/plugins (lexer/parser generation, JSON, code formatting)
+antlr4 = { module = "org.antlr:antlr4", version = "4.13.2" }
+gson = { module = "com.google.code.gson:gson", version = "2.10.1" }
+google-java-format = { module = "com.google.googlejavaformat:google-java-format", version = "1.25.2" }
+
 # Used only as dependency-substitution targets for composite builds (build-deps-common, build-logic).
 # The version string is irrelevant at resolution time since Gradle substitutes these with the
 # corresponding included-build project — but a version is still required for valid TOML coordinates.
 composite-desugaringCore = { module = "com.tom.rv2ide.build:desugaring-core", version = "1.0" }
 android-gradle-plugin = { module = "com.android.tools.build:gradle", version.ref = "agp" }
+
+# build-logic :plugins module deps (LexerGeneratorPlugin / formatting)
+common-antlr4 = { module = "org.antlr:antlr4", version.ref = "antlr" }
+google-gson = { module = "com.google.code.gson:gson", version.ref = "gson" }
+google-javaFormat = { module = "com.google.googlejavaformat:google-java-format", version.ref = "googleJavaFormat" }
 
 [plugins]
 kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
