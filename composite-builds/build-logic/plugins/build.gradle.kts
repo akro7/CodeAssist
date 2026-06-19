@@ -43,7 +43,7 @@ dependencies {
   implementation(libs.kotlin.compiler.embeddable)
   implementation(libs.antlr4)
   implementation(libs.gson)
-  implementation(libs.google.java.format)
+  implementation(libs.googlejavaformat)
 }
 
 gradlePlugin {
