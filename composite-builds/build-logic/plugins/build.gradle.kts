@@ -64,5 +64,9 @@ gradlePlugin {
       id = "com.tom.rv2ide.build.lexergenerator"
       implementationClass = "com.tom.rv2ide.plugins.LexerGeneratorPlugin"
     }
+    create("dev.ide.kotlinc-art") {
+      id = "dev.ide.kotlinc-art"
+      implementationClass = "com.tom.rv2ide.plugins.KotlincArtPlugin"
+    }
   }
 }
